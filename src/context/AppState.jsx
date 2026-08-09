@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const AppState = ({ children }) => {
-  const url = "https://portfolio-backend-gh7i.onrender.com";
+  const url = "https://portfolio-backend-gh7i.onrender.com/api";
   // const url = "https://nitesh-kumar-cqn2.onrender.com/api";
 
   const [token, setToken] = useState(localStorage.getItem("token") || "");
@@ -48,7 +48,7 @@ const AppState = ({ children }) => {
   // fetch Ptojects
   useEffect(() => {
     const fetchProjects = async () => {
-      const myProjects = await axios.get(`${url}/api/project/`, {
+      const myProjects = await axios.get(`${url}/project/`, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });
