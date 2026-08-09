@@ -48,7 +48,7 @@ const AppState = ({ children }) => {
   // fetch Ptojects
   useEffect(() => {
     const fetchProjects = async () => {
-      const myProjects = await axios.get(`${url}/project/`, {
+      const myProjects = await axios.get(`${url}/api/project/`, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });
