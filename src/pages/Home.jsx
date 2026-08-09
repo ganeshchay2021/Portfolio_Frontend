@@ -1,6 +1,9 @@
 import React, { useContext, useEffect, useRef } from "react";
 import Matter from "matter-js";
 import Profile from "../assets/fron_image.png";
+import {SiFlutter, SiDart, SiFigma, SiGithub, SiInsomnia, SiPostman,} from 'react-icons/si';
+
+
 import {
   FaArrowRight,
   FaReact,
@@ -32,6 +35,12 @@ const ICONS = [
   { Comp: FaNodeJs, color: "#68A063" },
   { Comp: SiTailwindcss, color: "#38BDF8" },
   { Comp: SiBootstrap, color: "#7952B3" },
+  { Comp: SiFlutter, color: "#02569B" },
+  { Comp: SiDart, color: "#0175C2" },
+  { Comp: SiFigma, color: "#F24E1E" },
+  { Comp: SiGithub, color: "#181717" },
+  { Comp: SiInsomnia, color: "#4000BF" },
+  { Comp: SiPostman, color: "#FF6C37" }
 ];
 
 const Home = () => {
@@ -194,7 +203,7 @@ const Home = () => {
                 Projects <FaArrowRight />
               </Link>
               <Link
-                target ={"_blank"}
+                target={"_blank"}
                 to={"https://drive.google.com/file/d/1slVJlhpvjanDNporO96C1GcSM1l-fi2H/view"}
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 px-5 py-2 rounded- shadow-lg transition"
               >
