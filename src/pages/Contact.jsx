@@ -59,7 +59,10 @@ const Contact = () => {
 
     setLoading(true);
     try {
+      setTimeout(() => {
         showDialog("Success!", "✅ Your message has been sent successfully!", "success");
+
+      }, 2000)
     } catch (err) {
       console.error("Error sending message:", err);
       showDialog("Error", `❌ Error: ${err.message || "Something went wrong."}`, "error");
@@ -194,11 +197,10 @@ const Contact = () => {
             >
               {/* Top accent gradient line */}
               <div
-                className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${
-                  dialog.type === "success"
+                className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${dialog.type === "success"
                     ? "from-green-400 to-blue-500"
                     : "from-red-500 to-orange-500"
-                }`}
+                  }`}
               />
 
               {/* Close Button */}
@@ -219,11 +221,10 @@ const Contact = () => {
               {/* Content Header */}
               <div className="flex items-start gap-4 mt-2">
                 <div
-                  className={`p-3 rounded-xl ${
-                    dialog.type === "success"
+                  className={`p-3 rounded-xl ${dialog.type === "success"
                       ? "bg-green-500/10 text-green-400"
                       : "bg-red-500/10 text-red-400"
-                  }`}
+                    }`}
                 >
                   {dialog.type === "success" ? (
                     <FiCheckCircle size={24} />
