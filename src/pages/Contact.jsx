@@ -59,15 +59,7 @@ const Contact = () => {
 
     setLoading(true);
     try {
-      const response = await sendMessage(name, email, message);
-      console.log("Server response:", response);
-
-      // If response is successful or data returns successfully
-      if (response && (response.success !== false)) {
         showDialog("Success!", "✅ Your message has been sent successfully!", "success");
-      } else {
-        showDialog("Success!", "✅ Your message has been sent successfully!", "success");
-      }
     } catch (err) {
       console.error("Error sending message:", err);
       showDialog("Error", `❌ Error: ${err.message || "Something went wrong."}`, "error");
