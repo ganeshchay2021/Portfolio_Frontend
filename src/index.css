@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+body::-webkit-scrollbar{display: none;}
+
+
+/* ///////////////////////////////==================================////////////////////////////////  */
+
+.lato {
+    font-family: "Lato", sans-serif;
+}
+
+.fontOne {
+    font-family: "Montserrat", sans-serif;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+.openSans {
+    font-family: "Open Sans", sans-serif;
+}
+.robotoMono{
+     font-family: "Roboto Mono", monospace;
+}
+.sourceCodePro{
+     font-family: "Source Code Pro", monospace;
+}
