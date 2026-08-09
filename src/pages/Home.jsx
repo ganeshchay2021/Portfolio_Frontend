@@ -195,7 +195,7 @@ const Home = () => {
               </Link>
               <Link
                 target ={"_blank"}
-                to={"https://drive.google.com/file/d/1RuAv92MQZ5X9UNhuswesCjZxoRk7yFZK/view?usp=sharing"}
+                to={"https://drive.google.com/file/d/1slVJlhpvjanDNporO96C1GcSM1l-fi2H/view"}
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 px-5 py-2 rounded- shadow-lg transition"
               >
                 Get CV <FaArrowRight />
