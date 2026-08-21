@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { FiAlertCircle, FiCheckCircle, FiX } from "react-icons/fi";
 import AppContext from "../context/AppContext";
+import { useEffect } from "react";
 
 const Contact = () => {
   const { admin, socialLinks, sendMessage } = useContext(AppContext);
@@ -70,6 +71,10 @@ const Contact = () => {
       setLoading(false);
     }
   };
+
+    useEffect(()=>{
+      window.scrollTo({top:0 , behavior:"smooth"});
+    }, [])
 
   return (
     <section

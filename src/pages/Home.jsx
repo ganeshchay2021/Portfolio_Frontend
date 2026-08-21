@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef } from "react";
 import Matter from "matter-js";
 import Profile from "../assets/fron_image.png";
-import {SiFlutter, SiDart, SiFigma, SiGithub, SiInsomnia, SiPostman,} from 'react-icons/si';
+import { SiFlutter, SiDart, SiFigma, SiGithub, SiInsomnia, SiPostman, } from 'react-icons/si';
 
 
 import {
@@ -140,6 +140,11 @@ const Home = () => {
       render.canvas.remove();
     };
   }, []);
+
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [])
 
   return (
     <>

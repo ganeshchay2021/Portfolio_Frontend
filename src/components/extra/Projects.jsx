@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { motion as Motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaEdit, FaTrash } from "react-icons/fa";
 import AppContext from "../../context/AppContext"; // adjust path
+import { useEffect } from "react";
 
 const ShowProjects = () => {
   const { projects } = useContext(AppContext);
@@ -16,6 +17,10 @@ const ShowProjects = () => {
     console.log("Delete clicked:", project);
     // call API or context delete function
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [])
 
   return (
     <section
