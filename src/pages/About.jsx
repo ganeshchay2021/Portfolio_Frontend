@@ -26,6 +26,7 @@ import {
 import { TbBoxModel2 } from "react-icons/tb";
 
 import AppContext from "../context/AppContext";
+import { useEffect } from "react";
 
 const skills = [
   { icon: <FaReact className="text-sky-400 text-2xl" />, name: "React.js" },
@@ -67,6 +68,10 @@ const skills = [
 const About = () => {
   const context = useContext(AppContext);
   const profile = context?.profile || "";
+
+  useEffect(()=>{
+    window.scrollTo({top:0 , behavior:"smooth"});
+  }, [])
 
   return (
     <section

@@ -9,6 +9,7 @@ import {
 import { motion, useScroll, useSpring } from "framer-motion";
 import AppContext from "../../context/AppContext";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const ShowProject = () => {
   const { projects, deleteProject, isAuthenticated } = useContext(AppContext);
@@ -56,11 +57,16 @@ const ShowProject = () => {
       const matchesCategory =
         selectedCategory === "All" ||
         (project?.category?.toLowerCase() || "") ===
-          selectedCategory.toLowerCase();
+        selectedCategory.toLowerCase();
 
       return matchesSearch && matchesCategory;
     });
   }, [projects, searchTerm, selectedCategory]);
+
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [])
 
   return (
     <main className="min-h-screen bg-gray-900 text-white px-6 py-12">
@@ -94,11 +100,10 @@ const ShowProject = () => {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 cursor-pointer hover:bg-green-500  text-sm ${
-                selectedCategory.toLowerCase() === cat.toLowerCase()
+              className={`px-4 py-2 cursor-pointer hover:bg-green-500  text-sm ${selectedCategory.toLowerCase() === cat.toLowerCase()
                   ? "bg-green-600"
                   : "bg-gray-700 hover:bg-gray-600"
-              }`}
+                }`}
             >
               {cat}
             </button>

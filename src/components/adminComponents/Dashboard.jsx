@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion as Motion } from "framer-motion";
 import AppContext from "../../context/AppContext";
+import { useEffect } from "react";
 
 const Dashboard = () => {
   const {
@@ -47,6 +48,11 @@ const Dashboard = () => {
     logout();
     navigate("/");
   };
+
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [])
 
   return (
     <>

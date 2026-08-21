@@ -124,6 +124,11 @@ const Home = () => {
     };
   }, []);
 
+  
+    useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [])
+
   return (
     <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
       {/* Matter.js canvas behind everything */}
